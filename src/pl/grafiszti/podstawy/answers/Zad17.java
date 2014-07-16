@@ -14,11 +14,14 @@ public class Zad17 {
 		Scanner inputStream = new Scanner(System.in);
 
 		System.out.println("Podaj a: ");
-		a = Double.parseDouble(inputStream.nextLine());
-
+		if (inputStream.hasNext()) {
+			a = inputStream.nextDouble();
+		}
 		do {
 			System.out.println("Podaj b rozne od 0: ");
-			b = Double.parseDouble(inputStream.nextLine());
+			if (inputStream.hasNext()) {
+				b = inputStream.nextDouble();
+			}
 		} while (b == 0);
 
 		inputStream.close();
