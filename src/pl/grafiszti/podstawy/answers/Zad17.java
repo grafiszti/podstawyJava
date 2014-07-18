@@ -1,6 +1,6 @@
 package pl.grafiszti.podstawy.answers;
 
-import java.util.Scanner;
+import pl.grafiszti.podstawy.main.Main;
 
 /*1.7 Utwórz dwie zmienne typu double. Następnie przy 
  * użyciu klasy Scanner pobierz od użytkownika dwie liczby 
@@ -11,20 +11,17 @@ public class Zad17 {
 	double a, b;
 
 	private void inputData() {
-		Scanner inputStream = new Scanner(System.in);
 
 		System.out.println("Podaj a: ");
-		if (inputStream.hasNext()) {
-			a = inputStream.nextDouble();
+		if (Main.consoleReader.hasNext()) {
+			a = Main.consoleReader.nextDouble();
 		}
 		do {
 			System.out.println("Podaj b rozne od 0: ");
-			if (inputStream.hasNext()) {
-				b = inputStream.nextDouble();
+			if (Main.consoleReader.hasNext()) {
+				b = Main.consoleReader.nextDouble();
 			}
 		} while (b == 0);
-
-		inputStream.close();
 	}
 
 	public void run() {

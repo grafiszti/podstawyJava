@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import pl.grafiszti.podstawy.main.Main;
+
 public class Zad18 {
 	File file;
 
@@ -17,17 +19,13 @@ public class Zad18 {
 	}
 
 	public void run() throws IOException {		
-		Scanner consoleReader = new Scanner(System.in);
 		System.out.println("Podaj imie do zapisania: ");
-		String name = consoleReader.nextLine();
-		consoleReader.close();
+		String name = Main.consoleReader.nextLine();
 		
 		PrintWriter writer = new PrintWriter(file);
 		writer.println(name);
 	    writer.close();
 
-	    Scanner reader = new Scanner(file);
-	    System.out.println(reader.nextLine());
-	    reader.close();
+	    System.out.println(Main.consoleReader.nextLine());
 	}
 }

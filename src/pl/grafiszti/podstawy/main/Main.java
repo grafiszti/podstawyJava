@@ -14,9 +14,8 @@ public class Main {
 		do {
 			System.out
 					.println("Podaj numer zadania do odpalenia, 0 konczy program: ");
-			Scanner reader = new Scanner(System.in);
-			if (reader.hasNext()) {
-				id = reader.nextInt();
+			if (consoleReader.hasNext()) {
+				id = consoleReader.nextInt();
 			}
 			switch (id) {
 			case 11:
@@ -52,11 +51,14 @@ public class Main {
 			case 18:
 				new Zad18().run();
 				System.out.println();
+				break;
+			case 19:
+				break;
 			default:
 				System.out.println("zly numer zadana");
 				break;
 			}
-			id = -1;
+			//id = -1;
 		} while (id != 0);
 	}
 }
