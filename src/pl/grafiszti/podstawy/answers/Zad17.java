@@ -13,14 +13,10 @@ public class Zad17 {
 	private void inputData() {
 
 		System.out.println("Podaj a: ");
-		if (Main.consoleReader.hasNext()) {
-			a = Main.consoleReader.nextDouble();
-		}
+		a = Main.consoleReader.nextDouble();
 		do {
 			System.out.println("Podaj b rozne od 0: ");
-			if (Main.consoleReader.hasNext()) {
-				b = Main.consoleReader.nextDouble();
-			}
+			b = Main.consoleReader.nextDouble();
 		} while (b == 0);
 	}
 
