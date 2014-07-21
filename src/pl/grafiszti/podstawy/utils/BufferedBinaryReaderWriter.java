@@ -46,10 +46,9 @@ public class BufferedBinaryReaderWriter {
 			byteCounter = -1;
 			System.out.println("Nie zaladowano wszystkich potrzebnych plikow");
 		} else {
-			int tempByteCounter = -1;
+			int tempByteCounter = 0;
 			try {
 				while ((tempByteCounter = inputStream.read(buffer)) != -1) {
-					tempByteCounter = inputStream.read(buffer);
 					outputStream.write(buffer, 0, tempByteCounter);
 					byteCounter += tempByteCounter;
 				}
@@ -62,8 +61,12 @@ public class BufferedBinaryReaderWriter {
 
 	public void close() {
 		try {
-			outputStream.close();
-			inputStream.close();
+			if (inputStream != null) {
+				inputStream.close();
+			}
+			if (outputStream != null) {
+				outputStream.close();
+			}
 		} catch (IOException e) {
 			System.out.println("Blad wejscia/wyjscia");
 			e.printStackTrace();

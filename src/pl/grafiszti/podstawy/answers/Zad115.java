@@ -16,9 +16,14 @@ public class Zad115 {
 		writer.write(2014);
 		writer.write(50 / 4);
 
+		writer.close();
+		
+		writer = new BinaryReaderWriter(
+				"../podstawyJava/assets/daneBinarne.txt", "rw");
+
 		System.out.println("ilosc bajtow w pliku: "
 				+ writer.countBytesFromFile());
-		
+
 		writer.close();
 	}
 }
